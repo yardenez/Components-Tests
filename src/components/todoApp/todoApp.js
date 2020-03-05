@@ -1,15 +1,5 @@
 import React, {useState } from 'react';
-
-function TodoItemV2(props){
-    const [isItemDone,setIsItemDone]=useState(props.done);
-    const title = props.title;
-    
-    return <p className={ isItemDone ? "task-done" : null} 
-            onClick={()=>setIsItemDone(!isItemDone)}>
-           {title}
-           </p>
-}
-
+import TodoItemV2 from './todoItem';
 
 function TodoAppV2(){
     const initialItems = [
