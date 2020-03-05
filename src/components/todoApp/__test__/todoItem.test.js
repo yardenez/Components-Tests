@@ -6,7 +6,6 @@ afterEach(cleanup);
 
 describe("TodoItem tests",()=>{
 
-    /* Is it correct to test this basic render? or trust react? */
     test("renders without strike when done is falsey",()=>{
         const {getByTestId} = render(<TodoItemV2 done={false} title="toStuff"/>);
         expect(getByTestId("todo-item").classList.contains('task-done')).toBe(false);
@@ -17,8 +16,9 @@ describe("TodoItem tests",()=>{
         expect(getByTestId("todo-item").classList.contains('task-done')).toBe(true);
     });
 
-    /*Is it better to seperate it into two different tests? 
-    one for click when done, and another for click when not done */
+   /* note to myself: usually, we will prefer not to have 2 expect in one test.
+   Here, we can seperate the functions so that one will only test first strike, and the second 
+   one will stay as follows without first expect */
     test("item click toggle strike correctly",()=>{
         const {getByTestId} = render(<TodoItemV2 done={false} title="toStuff"/>);  
         const item = getByTestId('todo-item'); 

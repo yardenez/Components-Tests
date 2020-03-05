@@ -13,6 +13,7 @@ function TodoAppV2(){
         if(newItemTitle!==''){
             const newItem={title:newItemTitle, done:false};
             items.push(newItem);
+            inputElem.value="";
             setItems([...items]);
         }
     }
