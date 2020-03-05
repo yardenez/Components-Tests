@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react'
-import renderer from 'react-test-renderer';
 import TodoItemV2 from '../todoItem';
 
 afterEach(cleanup);
 
-describe("todoItem tests",()=>{
+describe("TodoItem tests",()=>{
 
     /* Is it correct to test this basic render? or trust react? */
     test("renders without strike when done is falsey",()=>{
