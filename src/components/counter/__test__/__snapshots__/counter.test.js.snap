@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter tests Counter matches snapshot 1`] = `
+<div>
+  <span
+    data-testid="count"
+  >
+    0
+  </span>
+  <div
+    className="display-items-inline"
+  >
+    <button
+      className="add-button"
+      data-testid="add-button"
+      onClick={[Function]}
+    >
+      + 
+    </button>
+    <button
+      className="substract-button"
+      data-testid="substract-button"
+      onClick={[Function]}
+    >
+       - 
+    </button>
+  </div>
+</div>
+`;
